@@ -1,0 +1,196 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+
+.dropdown {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:80%;
+    margin:auto; 
+    
+}
+
+.TreD, .retouch {
+    position: relative;
+}
+
+.TreD ul, .retouch ul {
+    position: absolute;
+    margin-top:10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+    
+}
+
+
+.TreD li, .retouch li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TreD li:hover, .retouch li:hover {
+    background: rgb(138, 51, 116);
+}
+
+.TreD a, .retouch a { 
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown button, .home, .about, .contact{
+    background:none;
+    border:none;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    font-family: 'Source Serif Pro', serif;
+
+}
+
+.dropdown button:hover, .home:hover, .about:hover, .contact:hover {
+    color: rgb(138, 51, 116);
+}
+
+.mini__logo {
+    width: 80px;
+    border-radius:  5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    box-shadow: 5px 5px black;
+    cursor:pointer;
+}
+
+.all__page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid__container {
+    display: grid;
+    grid-gap:15px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    overflow: auto;
+    width: 1310px;
+    height: 1960px;
+    margin-left: 125px;
+
+}
+
+/*fixa så bilder är mycket mindre...*/
+.D1 {
+    background: url(../images/3D1.jpg);
+    grid-column: 1/ span 2;
+    grid-row: 1 / span 2;
+    width: 1500px;
+    height: 1071px;
+}
+
+.D2 {
+    background: url(../images/3D2.jpg);
+}
+
+.D3 {
+    background: url(../images/3D3.jpg);
+}
+
+.D4 {
+    background: url(../images/3D4.jpg);
+}
+
+.D5 {
+    background: url(../images/3D5.jpg);
+}
+
+.D6 {
+    background: url(../images/3D6.jpg);
+}
+
+.D7 {
+    background: url(../images/3D7.jpg);
+}
+
+.D8 {
+    background: url(../images/3D8.jpg);
+}
+
+
+
+.TreD button:focus + ul, .retouch button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+.container:hover {
+    opacity: 0.6;
+}  
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+  
+  @media screen and (min-width: 0px) and (max-width: 414px) {
+    #my-content { display: none; }   /* hide it elsewhere */
+  }
+
+  @media screen and (min-width: 415px) and (max-width: 2000px) {
+    #menu { display: none; }   /* hide it elsewhere */
+  }
